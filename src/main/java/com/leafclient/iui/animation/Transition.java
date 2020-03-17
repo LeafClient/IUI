@@ -1,6 +1,5 @@
 package com.leafclient.iui.animation;
 
-import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import static java.lang.Math.*;
@@ -15,15 +14,9 @@ public enum Transition {
     /**
      * See https://hackernoon.com/ease-in-out-the-sigmoid-factory-c5116d8abce9 for eases
      */
-    LOW_EASE(a -> {
-        return (0.5 / (1.0 / (1 + exp(-a * 2.5) - 0.5))) * (1.0 / (1 + exp(-a * 2.5) - 0.5)) + 0.5;
-    }),
-    EASE(a -> {
-        return (0.5 / (1.0 / (1 + exp(-a * 4.5) - 0.5))) * (1.0 / (1 + exp(-a * 4.5) - 0.5)) + 0.5;
-    }),
-    HIGH_EASE(a -> {
-        return (0.5 / (1.0 / (1 + exp(-a * 7.5) - 0.5))) * (1.0 / (1 + exp(-a * 7.5) - 0.5)) + 0.5;
-    });
+    LOW_EASE(a -> (0.5 / (1.0 / (1 + exp(-a * 2.5) - 0.5))) * (1.0 / (1 + exp(-a * 2.5) - 0.5)) + 0.5),
+    EASE(a -> (0.5 / (1.0 / (1 + exp(-a * 4.5) - 0.5))) * (1.0 / (1 + exp(-a * 4.5) - 0.5)) + 0.5),
+    HIGH_EASE(a -> (0.5 / (1.0 / (1 + exp(-a * 7.5) - 0.5))) * (1.0 / (1 + exp(-a * 7.5) - 0.5)) + 0.5);
 
     private final Function<Double, Double> function;
 

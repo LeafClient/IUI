@@ -21,6 +21,8 @@ public interface Renderer<T extends Component> {
      *
      * @param comp Component's instance
      */
-    default void update(T comp) {}
+    default void update(T comp) {
+        // Update the component
+    }
 
 }

@@ -7,7 +7,6 @@ import com.leafclient.iui.Renderer;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.WeakHashMap;
-import java.util.function.Consumer;
 
 /**
  * {@link Theme} is an essential tool for IUI. It contains, manage and use

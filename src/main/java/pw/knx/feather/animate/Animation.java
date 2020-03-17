@@ -176,12 +176,12 @@ public class Animation {
     /**
      * Increments your progress given the total duration and the number of ticks that have passed.
      *
-     * @param ticks number of actual ticks to increment your progress by
+     * @param ms number of actual ticks to increment your progress by
      */
-    protected void increment(int ticks) {
+    protected void increment(int ms) {
         if (!inProgress) return;
-        if (!isForward) ticks *= -1;
-        this.progress += (double) ticks / (double) duration;
+        if (!isForward) ms *= -1;
+        this.progress += (double) ms / (double) duration;
 
         if (progress > 1) {
             this.progress = 1;
