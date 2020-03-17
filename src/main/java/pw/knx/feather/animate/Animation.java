@@ -27,7 +27,7 @@ public class Animation {
     /**
      * An integer representing your current animation duration. Stored in "ticks"
      */
-    int duration = 400;
+    private int duration = 400;
 
     /**
      * True if the animation is playing from 0-1.0, false if from 1.0-0
@@ -47,7 +47,7 @@ public class Animation {
     /**
      * The internal double representing your actual progress thus far
      */
-    double progress = 0;
+    private double progress = 0;
 
     /**
      * Sets the animation to progress.
